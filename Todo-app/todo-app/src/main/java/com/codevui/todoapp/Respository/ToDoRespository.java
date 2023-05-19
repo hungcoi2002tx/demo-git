@@ -9,5 +9,5 @@ import com.codevui.todoapp.Entity.ToDo;
 
 @Repository
 public interface ToDoRespository extends JpaRepository<ToDo, Integer>{
-
+    
 }

@@ -10,8 +10,8 @@ public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(App.class, args);
 
-		User u = User.builder().id(1).name("hung").age(1).build();
-		System.out.println(u);
+		
+		System.out.println("done");
 		
 	}
 

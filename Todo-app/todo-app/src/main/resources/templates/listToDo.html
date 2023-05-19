@@ -58,10 +58,10 @@
                                         <th th:text="${todo.id}" scope="row">1</th>
                                         <!-- TODO: Get data title of ToDo -->
                                         <td th:text="${todo.title}"></td>   
-                                        <td th:text="${todo.completed}"></td>
+                                        <td th:class="${todo.completed} ? 'text-success' : 'text-warning'" th:text="${todo.completed} ? 'Completed' : 'Processing'"></td>
                                         <td>
                                             <!-- TODO: Link to completedToDo -->
-                                            <a th:href="@{'/complete-todo?id=' + ${todo.id}}"><button type="submit" class="btn btn-danger">Finished</button></a>
+                                            <a th:href="@{'/complete-todo?id=' + ${todo.id}}"><button type="submit" class="btn btn-danger" th:text="${todo.completed} ? 'Undo' : 'Finished'">Finished</button></a>
                                             <!-- TODO: Link to delete -->
                                             <a th:href="@{'/delete-todo?id=' + ${todo.id}}"><button type="submit" class="btn btn-success ms-1">Delete</button></a>
                                         </td>

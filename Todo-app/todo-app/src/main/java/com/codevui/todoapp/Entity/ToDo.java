@@ -21,7 +21,7 @@ public class ToDo {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "title")
+    @Column(name = "title" , columnDefinition = "nvarchar(MAX)")
     private String title;
 
     @Column(name = "completed")
